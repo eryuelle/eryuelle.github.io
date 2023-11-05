@@ -1,0 +1,17 @@
+.iconitem {
+  display: flex;
+  height: 48px; /* Match icon size, set in _app.css */
+  padding: 4px;
+
+  border-bottom: 1px solid black;
+}
+
+.iconitem:last-child {
+  border-bottom: none;
+}
+
+.icondesc {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}

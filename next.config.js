@@ -2,7 +2,9 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  assetPrefix: './'
+  assetPrefix: './',
+  distDir: 'docs',
+  output: 'export',
 }
  
 module.exports = nextConfig;
