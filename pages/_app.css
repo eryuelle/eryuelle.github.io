@@ -1,3 +1,7 @@
+html {
+  background-color: #f0f0f0;
+}
+
 body {
   /* background: antiquewhite; */
   font-family: -apple-system, BlinkMacSystemFont, Inter, "Segoe UI";
@@ -121,10 +125,11 @@ h1, h2 {
 
 #container {
   width: 800px;
-  padding-top: 4px;
+  padding-top: 6px;
 }
 
 .maple-icon {
   height: 40px;
   width: 40px;
+  border-radius: 5px;
 }
