@@ -1,11 +1,12 @@
 import styles from './icon-list.module.css';
 
 interface IconListProps {
+  title: string;
   items: string[];
   dictionary: { [key: string]: any };
 }
 
-export default function ListComponent({ items, dictionary }: IconListProps) {
+export default function ListComponent({ title, items, dictionary }: IconListProps) {
   const iter = () => {
 
     return items.map((item) => {
@@ -19,6 +20,7 @@ export default function ListComponent({ items, dictionary }: IconListProps) {
           />
           <div className={styles.icondesc}>
             <div>{i.name}</div>
+            <div className={styles.flavortext}>{i.flavor}</div>
           </div>
         </div>
       );
@@ -26,8 +28,9 @@ export default function ListComponent({ items, dictionary }: IconListProps) {
   };
 
   return (
-    <>
-     { iter() }
-    </>
+    <div className={styles.container}>
+      <h2>{title}</h2>
+      { iter() }
+    </div>
   );
 };

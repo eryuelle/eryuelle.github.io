@@ -1,6 +1,10 @@
+.container {
+  margin-top: 8px;
+}
+
 .iconitem {
   display: flex;
-  height: 48px; /* Match icon size, set in _app.css */
+  height: 40px; /* Match icon size, set in _app.css */
   padding: 4px;
 
   border-bottom: 1px solid black;
@@ -12,6 +16,12 @@
 
 .icondesc {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 8px;
+}
+
+.flavortext {
+  color: gray;
+  font-size: 15px;
 }
