@@ -8,7 +8,6 @@ interface IconListProps {
 
 export default function ListComponent({ title, items, dictionary }: IconListProps) {
   const iter = () => {
-
     return items.map((item) => {
       const i = dictionary[item];
 
@@ -27,6 +26,7 @@ export default function ListComponent({ title, items, dictionary }: IconListProp
     });
   };
 
+  // TODO: Support for sub-titles. Context: add info about Sunday / Wednesday reset
   return (
     <div className={styles.container}>
       <h2>{title}</h2>

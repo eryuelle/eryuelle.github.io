@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
           <div className="menu">
             <li><a className="menu-item" href="/">Home</a></li>
+            <li><a className="menu-item" href="/weeklies">Weeklies</a></li>
             <li><a className="menu-item" href="/bosses">Bosses</a></li>
           </div>
         </div>
