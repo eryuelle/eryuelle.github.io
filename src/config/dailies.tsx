@@ -66,12 +66,16 @@ interface BDaily {
   flavor: string;
 }
 
-// TODO: Just Arkarium and Gollux? Ninja Castle?
 let B_DAILIES_DATA: { [key: string]: BDaily } = {
-  "Ursus": {
-    name: "Ursus",
-    icon: "/icons/tasks/ursus.png",
-    flavor: "[Placeholder] We need money.",
+  "Gollux": {
+    name: "Gollux",
+    icon: "/icons/bosses/gollux.png",
+    flavor: "Gollux Coins / Superior Accessory Set",
+  },
+  "Arkarium": {
+    name: "Arkarium",
+    icon: "/icons/bosses/arkarium.png",
+    flavor: "L > Dominator Pendant",
   },
 };
 
@@ -80,7 +84,8 @@ export const B_DAILIES = () => {
 }
 
 export const B_DAILIES_ORDER = [
-  "Ursus",
+  "Gollux",
+  "Arkarium",
 ];
 
 // T = Tasks
@@ -93,17 +98,26 @@ interface TDaily {
   flavor?: string;
 }
 
-// TODO: Add Maple Tour
 let T_DAILIES_DATA: { [key: string]: TDaily } = {
+  "Ursus": {
+    name: "Ursus",
+    icon: "/icons/tasks/ursus.png",
+    mesos: "90,000,000+",
+  },
+  "Maple Tour": {
+    name: "Maple Tour",
+    icon: "/icons/tasks/maple_tour.png",
+    mesos: "50,000,000+",
+  },
   "Monster Park": {
     name: "Monster Park",
     icon: "/icons/tasks/monster_park.png",
     exp: "???",
   },
-  "Ursus": {
-    name: "Ursus",
-    icon: "/icons/tasks/ursus.png",
-    mesos: "90,000,000+",
+  "Ninja Castle": {
+    name: "Ninja Castle",
+    icon: "/icons/tasks/ninja_castle.png",
+    flavor: "Frenzied Gigatoad = WAP Recipes",
   },
 };
 
@@ -120,6 +134,8 @@ export const T_DAILIES = () => {
 }
 
 export const T_DAILIES_ORDER = [
-  "Monster Park",
   "Ursus",
+  "Maple Tour",
+  "Monster Park",
+  "Ninja Castle",
 ];
