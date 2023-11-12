@@ -8,7 +8,7 @@ export default function Index() {
     <>
       <h1>Bosses</h1>
       <IconList
-        title="Bosses"
+        title="Weekly Bosses"
         items={BOSSES_ORDER}
         dictionary={BOSSES()}
       />

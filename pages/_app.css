@@ -1,5 +1,5 @@
 html {
-  background-color: #f0f0f0;
+  background-color: #fafafa;
 }
 
 body {
@@ -28,7 +28,7 @@ h1, h2, h3 {
   margin: 0;
   padding: 60px 0;
   list-style: none;
-  background-color: aliceblue;
+  background-color: antiquewhite;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: .1s;
 }
@@ -44,7 +44,7 @@ h1, h2, h3 {
 }
 
 .burger-menu .menu-item:hover {
-  background-color: #CFD8DC;
+  background-color: #d3d3d3;
 }
 
 /* Checkbox control for menu */
