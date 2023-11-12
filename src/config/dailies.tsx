@@ -77,7 +77,7 @@ let B_DAILIES_DATA: { [key: string]: BDaily } = {
   "Arkarium": {
     name: "Arkarium",
     icon: "/icons/bosses/arkarium.png",
-    flavor: "L > Dominator Pendant",
+    flavor: "Dominator Pendant",
   },
 };
 

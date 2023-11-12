@@ -1,8 +1,4 @@
-export const commaNumber = (number: number) => {
-  return number.toLocaleString("en-US");
-}
-
-export const abbreviateNumber = (number: number) => {
+export const abbreviateNumber = (number: number): string => {
   const abbreviations = ['', 'K', 'M', 'B', 'T', 'Q'];
 
   let index = 0;
@@ -12,4 +8,12 @@ export const abbreviateNumber = (number: number) => {
   }
 
   return number.toFixed(1) + abbreviations[index];
+}
+
+export const commaNumber = (number: number): string => {
+  return number.toLocaleString("en-US");
+}
+
+export const sum = (numbers: number[]): number => {
+  return numbers.reduce((prev, curr) => prev + curr, 0);
 }

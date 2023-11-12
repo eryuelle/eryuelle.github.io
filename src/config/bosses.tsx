@@ -1,4 +1,4 @@
-import { abbreviateNumber } from "../lib/numbers";
+import { abbreviateNumber, sum } from "../lib/numbers";
 
 interface Boss {
   name: string;
@@ -9,8 +9,8 @@ interface Boss {
 
   // Computed flavor texts
   flavor?: string;
-  corner_flavor?: string;
-  last_flavor?: string;
+  cornerFlavor?: string;
+  lastFlavor?: string;
 }
 
 let BOSSES_DATA: { [key: string]: Boss } = {
@@ -60,7 +60,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     name: "Chaos Papulatus",
     icon: "/icons/bosses/papulatus.png",
     hp: [378_000_000_000, 126_000_000_000],
-    dr: 0,
+    dr: 250,
     mesos: 132_250_000,
   },
 };
@@ -68,6 +68,8 @@ let BOSSES_DATA: { [key: string]: Boss } = {
 export const BOSSES = () => {
   for (const [k, v] of Object.entries(BOSSES_DATA)) {
     BOSSES_DATA[k].flavor = `${abbreviateNumber(v.mesos)} Mesos`;
+    BOSSES_DATA[k].cornerFlavor = `${abbreviateNumber(sum(v.hp))} HP`;
+    BOSSES_DATA[k].lastFlavor = `${v.dr}% DR`;
   }
   return BOSSES_DATA;
 }

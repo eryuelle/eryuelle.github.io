@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <>
       <h1>Dailies</h1>
-      <div>Resets at 5pm MT every day</div>
+      <h3>Resets @ 5pm MT every day</h3>
       <IconList
         title="Arcane River"
         items={AR_DAILIES_ORDER}

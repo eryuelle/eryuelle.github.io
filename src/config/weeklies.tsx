@@ -66,15 +66,10 @@ interface BWeekly {
 
 // TODO: There's a lot of weekly bosses...
 let B_WEEKLIES_DATA: { [key: string]: BWeekly } = {
-  "Gollux": {
-    name: "Gollux",
-    icon: "/icons/bosses/gollux.png",
-    flavor: "Gollux Coins / Superior Accessory Set",
-  },
-  "Arkarium": {
-    name: "Arkarium",
-    icon: "/icons/bosses/arkarium.png",
-    flavor: "L > Dominator Pendant",
+  "WIP": {
+    name: "Work in Progress...",
+    icon: "/icons/bosses/black_mage.png",
+    flavor: "Not sure what to put here",
   },
 };
 
@@ -83,8 +78,7 @@ export const B_WEEKLIES = () => {
 }
 
 export const B_WEEKLIES_ORDER = [
-  "Gollux",
-  "Arkarium",
+  "WIP",
 ];
 
 // T = Tasks

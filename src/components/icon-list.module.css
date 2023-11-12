@@ -15,10 +15,29 @@
 }
 
 .icondesc {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 8px;
+}
+
+.iconhalf {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 8px;
+}
+
+.iconhalfleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+.cornerflavortext {
+  color: #36454F; /* "Charcoal" */
+  font-size: 16px;
 }
 
 .flavortext {
