@@ -13,6 +13,7 @@ export default function Index() {
       <h1>Weeklies</h1>
       <div id={styles.container}>
         <div className={styles.split}>
+        <h3>Wednesday Reset @ 5pm MT</h3>
           <IconList
             title="Bosses"
             items={B_WEEKLIES_ORDER}
@@ -20,6 +21,7 @@ export default function Index() {
           />
         </div>
         <div className={styles.split}>
+        <h3>Sunday Reset @ 5pm MT</h3>
           <IconList
             title="Misc. Tasks"
             items={T_WEEKLIES_ORDER}

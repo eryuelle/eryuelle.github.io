@@ -1,7 +1,17 @@
+import IconList from '../src/components/icon-list';
+import {
+  BOSSES, BOSSES_ORDER
+} from '../src/config/bosses';
+
 export default function Index() {
   return (
     <>
-      <h1>[WIP] Bosses</h1>
+      <h1>Bosses</h1>
+      <IconList
+        title="Bosses"
+        items={BOSSES_ORDER}
+        dictionary={BOSSES()}
+      />
     </>
   )
 }

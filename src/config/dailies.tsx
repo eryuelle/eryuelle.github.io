@@ -1,3 +1,5 @@
+import { commaNumber } from  "../lib/numbers";
+
 // AR = Arcane River
 
 interface ARDaily {
@@ -43,7 +45,7 @@ let AR_DAILIES_DATA: { [key: string]: ARDaily } = {
 export const AR_DAILIES = () => {
   for (const [k, v] of Object.entries(AR_DAILIES_DATA)) {
     if (v.exp !== undefined) {
-      AR_DAILIES_DATA[k].flavor = `${v.exp.toLocaleString("en-US")} EXP`;
+      AR_DAILIES_DATA[k].flavor = `${commaNumber(v.exp)} EXP`;
     }
   }
   return AR_DAILIES_DATA;
