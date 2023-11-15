@@ -12,6 +12,11 @@ h1, h2, h3 {
   margin: 0px;
 }
 
+ol {
+  margin: 8px 0px;
+  padding: 0px 32px;
+}
+
 #body{
   height: 100vh;
 }

@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 import { useRef } from 'react';
 
 import '../public/fonts.css';
@@ -16,6 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>Maypulsutori</title>
+      </Head>
       <div id="body">
         <div className="burger-menu">
           <input type="checkbox" ref={checkboxRef} />
@@ -29,6 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <li><a className="menu-item" href="/">Dailies</a></li>
             <li><a className="menu-item" href="/weeklies">Weeklies</a></li>
             <li><a className="menu-item" href="/bosses">Bosses</a></li>
+            <li><a className="menu-item" href="/checklists">Checklists</a></li>
           </div>
         </div>
 

@@ -109,7 +109,7 @@ let T_DAILIES_DATA: { [key: string]: TDaily } = {
   "Maple Tour": {
     name: "Maple Tour",
     icon: "/icons/tasks/maple_tour.png",
-    mesos: "50,000,000+",
+    mesos: "27,000,000+",
   },
   "Monster Park": {
     name: "Monster Park",
