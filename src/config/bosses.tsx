@@ -169,4 +169,5 @@ export const BOSSES_ORDER = [
   "Normal Cygnus",
   "Chaos Pink Bean",
   "Hard Hilla",
+  "Hard Von Leon",
 ];

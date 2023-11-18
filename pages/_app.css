@@ -12,12 +12,12 @@ h1, h2, h3 {
   margin: 0px;
 }
 
-ol {
+ol, ul {
   margin: 8px 0px;
   padding: 0px 32px;
 }
 
-ol ol {
+ol ol, ul ol {
   margin: 0px;
 }
 
@@ -145,4 +145,9 @@ li {
   height: 40px;
   width: 40px;
   border-radius: 5px;
+}
+
+.flavortext {
+  color: gray;
+  font-size: 15px;
 }
