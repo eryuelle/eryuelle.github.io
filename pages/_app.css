@@ -17,6 +17,14 @@ ol {
   padding: 0px 32px;
 }
 
+ol ol {
+  margin: 0px;
+}
+
+li {
+  padding: 1px 0px;
+}
+
 #body{
   height: 100vh;
 }

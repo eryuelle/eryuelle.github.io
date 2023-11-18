@@ -120,7 +120,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     mesos: 72_250_000,
   },
   "Chaos Pink Bean": {
-    name: "Hard Magnus",
+    name: "Chaos Pink Bean",
     icon: "/icons/bosses/pink_bean.png",
     hp: [69_300_000_000],
     dr: 100,
@@ -132,6 +132,13 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [16_800_000_000],
     dr: 100,
     mesos: 56_250_000,
+  },
+  "Hard Von Leon": {
+    name: "Hard Von Leon",
+    icon: "/icons/bosses/von_leon.png",
+    hp: [10_500_000_000],
+    dr: 90,
+    mesos: 12_250_000,
   },
 };
 
