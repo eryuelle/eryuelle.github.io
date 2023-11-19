@@ -10,26 +10,32 @@ interface IconListProps {
 }
 
 function GearList({ icons }: IconListProps) {
+  const showIcons = (icons: string[]) => {
+    return icons.map((icon) => {
+      return (
+        <img
+          className="maple-icon-small"
+          src={icon}
+        />
+      );
+    });
+  }
+
   const iter = () => {
     return icons.map((icon) => {
       return (
-        <li>
-          <div className="gear-list-item">
-            <img
-              className="maple-icon-small"
-              src={icon.icons[0]}
-            />
-            <div>{icon.desc}</div>
-          </div>
-        </li>
+        <tr>
+          <td>{ showIcons(icon.icons) }</td>
+          <td>{icon.desc}</td>
+        </tr>
       );
     });
   };
 
   return (
-    <ul>
+    <table id="gear-table">
       { iter() }
-    </ul>
+    </table>
   );
 };
 

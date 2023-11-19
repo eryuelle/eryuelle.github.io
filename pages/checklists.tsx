@@ -19,14 +19,18 @@ export default function Index() {
           </ol>
         <li>EXP Boosters</li>
           <ol type="i">
+            <li>Link Skills</li>
             <li>[2x] EXP Coupons</li>
             <li>[1.5x] MVP</li>
+            <li>[1.1x] Monster Park Gold Potion</li>
             <li>[1.1x] EAP</li>
           </ol>
       </ol>
       <h2>Bossing</h2>
       <ol>
-        <li>Damage</li>
+        <li>Equips</li>
+        <li>Link Skills</li>
+        <li>Legion</li>
       </ol>
       <h2>Boss Chest</h2>
       <ol>

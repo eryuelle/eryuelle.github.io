@@ -153,8 +153,8 @@ li {
 
 .maple-icon-small {
   height: 30px;
-  width: 30px;
-  border-radius: 5px;
+  /* width: 30px; */
+  border-radius: 3px;
 }
 
 .flavortext {
@@ -164,7 +164,30 @@ li {
 
 /* Gear list */
 
-.gear-list-item {
-  display: flex;
-  align-items: center;
+#gear-table {
+  border-collapse: collapse;
+  border: none;
+  /* width: 100%; */
+}
+
+/* #gear-table td:first-child {
+  width: 1%;
+} */
+
+#gear-table td {
+  border-bottom: 1px solid black;
+  padding: 4px 8px;
+}
+
+#gear-table tr:last-child td {
+  border-bottom: none;
+}
+
+#gear-table td img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+#gear-table td img:last-child {
+  margin-right: 0px;
 }
