@@ -170,6 +170,11 @@ li {
   /* width: 100%; */
 }
 
+#gear-table .image-cage {
+  width: 100%;
+  text-align: center;
+}
+
 /* #gear-table td:first-child {
   width: 1%;
 } */

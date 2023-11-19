@@ -25,7 +25,9 @@ function GearList({ icons }: IconListProps) {
     return icons.map((icon) => {
       return (
         <tr>
-          <td>{ showIcons(icon.icons) }</td>
+          <td><div className="image-cage">
+            { showIcons(icon.icons) }
+          </div></td>
           <td>{icon.desc}</td>
         </tr>
       );
