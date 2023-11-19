@@ -42,6 +42,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <div id="page" onClick={pageClick}>
           <div id="container">
             <Component {...pageProps} />
+            <div id="stupidspace"></div>
+            <div className="flavortext">
+              Updated as of 11/18/2023 (New Age patch)
+            </div>
           </div>
         </div>
       </div>

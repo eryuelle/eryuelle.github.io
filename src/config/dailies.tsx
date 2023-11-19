@@ -1,5 +1,6 @@
 import { commaNumber } from  "../lib/numbers";
 
+// Info courtesy of https://whackybeanz.com/calc/everything-exp
 // AR = Arcane River
 
 interface ARDaily {
@@ -13,32 +14,47 @@ let AR_DAILIES_DATA: { [key: string]: ARDaily } = {
   "Vanishing Journey": {
     name: "Vanishing Journey",
     icon: "/icons/symbols/vanishing_journey.png",
-    exp: 563_178_660,
+    exp: 732_132_258,
   },
   "Chu Chu Island": {
     name: "Chu Chu Island",
     icon: "/icons/symbols/chu_chu_island.png",
-    exp: 1_647_429_420,
+    exp: 2_141_658_246,
   },
   "Lachelein": {
     name: "Lachelein",
     icon: "/icons/symbols/lachelein.png",
-    exp: 2_453_152_500,
+    exp: 3_189_098_250,
   },
   "Arcana": {
     name: "Arcana",
     icon: "/icons/symbols/arcana.png",
-    exp: 2_542_452_030,
+    exp: 3_305_187_639,
   },
   "Morass": {
     name: "Morass",
     icon: "/icons/symbols/morass.png",
-    exp: 3_383_281_665,
+    exp: 4_398_266_165,
   },
   "Esfera": {
     name: "Esfera",
     icon: "/icons/symbols/esfera.png",
-    exp: 3_485_264_580,
+    exp: 4_530_843_954,
+  },
+  "Moonbridge": {
+    name: "Moonbridge",
+    icon: "/icons/symbols/moonbridge.png",
+    exp: 8_397_548_775,
+  },
+  "Labyrinth of Suffering": {
+    name: "Labyrinth of Suffering",
+    icon: "/icons/symbols/labyrinth_of_suffering.png",
+    exp: 9_057_690_000,
+  },
+  "Limina": {
+    name: "Limina",
+    icon: "/icons/symbols/limina.png",
+    exp: 10_225_741_680,
   },
 };
 
@@ -58,6 +74,8 @@ export const AR_DAILIES_ORDER = [
   "Arcana",
   "Morass",
   "Esfera",
+  "Moonbridge",
+  "Labyrinth of Suffering",
 ];
 
 // B = Bosses

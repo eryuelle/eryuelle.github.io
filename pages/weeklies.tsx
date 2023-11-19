@@ -3,7 +3,6 @@ import styles from './weeklies.module.css';
 import IconList from '../src/components/icon-list';
 import {
   AR_WEEKLIES, AR_WEEKLIES_ORDER,
-  B_WEEKLIES, B_WEEKLIES_ORDER,
   T_WEEKLIES, T_WEEKLIES_ORDER,
 } from '../src/config/weeklies';
 

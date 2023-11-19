@@ -141,13 +141,30 @@ li {
   padding-top: 6px;
 }
 
+#stupidspace {
+  height: 24px;
+}
+
 .maple-icon {
   height: 40px;
   width: 40px;
   border-radius: 5px;
 }
 
+.maple-icon-small {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
 .flavortext {
   color: gray;
   font-size: 15px;
+}
+
+/* Gear list */
+
+.gear-list-item {
+  display: flex;
+  align-items: center;
 }

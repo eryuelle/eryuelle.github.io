@@ -18,16 +18,17 @@ export default function Index() {
         <li>[113] Toy Factory {"<Process 1>"} Zone 5</li>
         <li>[123] Fantasy Theme World: Extreme Station {"<3>"}</li>
         <li>[130 ~ 140] Korean Folk Town</li>
-        <li>[149] Kerning Tower: 2F Cafe {"<2, 3>"} (has SF)</li>
-        <li>[155] Kerning Tower: 5F Cosmetic Shops {"<3>"}</li>
+        <li>[142] Partem: Keeper's Path 4 (req. lv 135)</li>
+        <li>[149] Kerning Tower: 2F Cafe {"<2, 3>"} (req. lv 145, has SF)</li>
+        <li>[155] Kerning Tower: 5F Cosmetic Shops {"<3>"} (req. lv 145)</li>
         <li>[164] Showa Street 2</li>
         <li>[167] Boswell Field IV</li>
         <li>[170 ~ 186] Kritias: Forest of [Pain 2, Scorching 2, Sorrow 4]</li>
         <li>[175] Corridor 203 (has SF)</li>
         <li>[182] Dingy Brawl 'n' Bash Club 3 (req. level 175)</li>
         <li>[190] Twilight Perion: Deserted Southern Ridge (has SF)</li>
-        <li>[191] Fox Tree Top Path</li>
-        <li>[194] Fox Tree Lower Path</li>
+        <li>[191] Fox Tree Top Path (req. lv 180 + quests)</li>
+        <li>[194] Fox Tree Lower Path (req. lv 180 + quests)</li>
         <li>[195] Twilight Perion: Forsaken Excavation Site 2</li>
         <li>[199] Scrapyard Quests</li>
         <li>[201 (30*)] Weathered Land of Rage</li>

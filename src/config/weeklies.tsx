@@ -29,7 +29,7 @@ let AR_WEEKLIES_DATA: { [key: string]: ARWeekly } = {
     level: 225,
   },
   "Morass": {
-    name: "Enheim Defense",
+    name: "Ranheim Defense",
     icon: "/icons/symbols/morass.png",
     level: 230,
   },
