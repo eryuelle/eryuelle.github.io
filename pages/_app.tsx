@@ -36,6 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <li><a className="menu-item" href="/training">Training</a></li>
             <li><a className="menu-item" href="/gear">Gear Progression</a></li>
             <li><a className="menu-item" href="/checklists">Checklists</a></li>
+            <li><a className="menu-item" href="/links">External Links</a></li>
           </div>
         </div>
 
