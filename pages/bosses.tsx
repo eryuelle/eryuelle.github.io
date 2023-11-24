@@ -1,4 +1,4 @@
-import IconList from '../src/components/icon-list';
+import IconList from '../src/components/icon-list/icon-list';
 import {
   BOSSES, BOSSES_ORDER
 } from '../src/config/bosses';

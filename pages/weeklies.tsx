@@ -1,6 +1,6 @@
 import styles from './weeklies.module.css';
 
-import IconList from '../src/components/icon-list';
+import IconList from '../src/components/icon-list/icon-list';
 import {
   AR_WEEKLIES, AR_WEEKLIES_ORDER,
   T_WEEKLIES, T_WEEKLIES_ORDER,

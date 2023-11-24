@@ -1,0 +1,94 @@
+.burgerMenu .menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  margin: 0;
+  padding: 60px 0;
+  list-style: none;
+  background-color: antiquewhite;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .1s;
+}
+
+.burgerMenu .menuItem {
+  display: block;
+  padding: 10px 21px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  transition-duration: .1s;
+}
+
+.burgerMenu .menuItem:hover {
+  background-color: #d3d3d3;
+}
+
+/* Checkbox control for menu */
+.burgerMenu input[type="checkbox"]:checked ~ .menu {
+  left: 0;
+}
+
+/* Hamburger */
+
+.burgerMenu input {
+  position: fixed;
+  display: block;
+  height: 28px;
+  width: 28px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.burgerMenu .burgerLines {
+  display: block;
+  height: 21px;
+  width: 27px;
+  position: fixed;
+  top: 21px;
+  left: 24px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burgerMenu .burgerLines .line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.burgerMenu .burgerLines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.1s ease-in-out;
+}
+
+.burgerMenu .burgerLines .line2 {
+  transition: transform 0.05s ease-in-out;
+}
+
+.burgerMenu .burgerLines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.1s ease-in-out;
+}
+
+.burgerMenu input[type="checkbox"]:checked ~ .burgerLines .line1 {
+  transform: rotate(45deg);
+}
+
+.burgerMenu input[type="checkbox"]:checked ~ .burgerLines .line2 {
+  transform: scaleY(0);
+}
+
+.burgerMenu input[type="checkbox"]:checked ~ .burgerLines .line3 {
+  transform: rotate(-45deg);
+}

@@ -5,6 +5,8 @@ import { useRef } from 'react';
 import '../public/fonts.css';
 import './_app.css';
 
+import BurgerMenu from '../src/components/burger-menu/burger-menu';
+
 export default function App({ Component, pageProps }: AppProps) {
   const checkboxRef = useRef<HTMLInputElement>(null);
 
@@ -21,24 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Maypulsutori</title>
       </Head>
       <div id="body">
-        <div className="burger-menu">
-          <input type="checkbox" ref={checkboxRef} />
-          <div className="burger-lines">
-            <span className="line line1"></span>
-            <span className="line line2"></span>
-            <span className="line line3"></span>
-          </div>  
-
-          <div className="menu">
-            <li><a className="menu-item" href="/">Dailies</a></li>
-            <li><a className="menu-item" href="/weeklies">Weeklies</a></li>
-            <li><a className="menu-item" href="/bosses">Bosses</a></li>
-            <li><a className="menu-item" href="/training">Training</a></li>
-            <li><a className="menu-item" href="/gear">Gear Progression</a></li>
-            <li><a className="menu-item" href="/checklists">Checklists</a></li>
-            <li><a className="menu-item" href="/links">External Links</a></li>
-          </div>
-        </div>
+        <BurgerMenu checkboxRef={checkboxRef} />
 
         <div id="page" onClick={pageClick}>
           <div id="container">

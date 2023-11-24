@@ -2,17 +2,24 @@
   margin-top: 8px;
 }
 
+/* Shared */
+
 .iconitem {
   display: flex;
-  height: 40px; /* Match icon size, set in _app.css */
   padding: 4px;
-
-  border-bottom: 1px solid black;
 }
 
 .iconitem:last-child {
   border-bottom: none;
 }
+
+.iconhalf {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Standard layout */
 
 .icondesc {
   width: 100%;
@@ -22,13 +29,7 @@
   padding-left: 8px;
 }
 
-.iconhalf {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.iconhalfleft {
+.iconhalfright {
   display: flex;
   flex-direction: column;
   justify-content: center;
