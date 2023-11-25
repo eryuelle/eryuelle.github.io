@@ -121,7 +121,7 @@ interface TDaily {
 let T_DAILIES_DATA: { [key: string]: TDaily } = {
   "Ursus": {
     name: "Ursus",
-    icon: "/icons/tasks/ursus.png",
+    icon: "/icons/tasks/ursus_map.png",
     mesos: "90,000,000+",
   },
   "Maple Tour": {

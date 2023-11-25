@@ -10,13 +10,21 @@ interface IconListProps {
 }
 
 function GearList({ icons }: IconListProps) {
+  // const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+  //   console.log('Image loaded:', );
+  // };
+
   const showIcons = (icons: string[]) => {
     return icons.map((icon) => {
       return (
-        <img
-          className="maple-icon-small"
-          src={icon}
-        />
+        <div className="image-cage2">
+          <img
+            // onLoad={handleImageLoad}
+            className="maple-icon-small"
+            src={icon}
+            // ref={imgRef}
+          />
+        </div>
       );
     });
   }

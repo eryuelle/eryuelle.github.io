@@ -22,10 +22,12 @@ export default function IconList({ compact, title, items, dictionary }: IconList
 
       return (
         <div className={styles.iconitem}>
-          <img
-            className="maple-icon-small"
-            src={i.icon}
-          />
+          <div className="image-cage2">
+            <img
+              className="maple-icon-small"
+              src={i.icon}
+            />
+          </div>
           <div className={`${styles.iconhalf} left-padding`}>
             {i.name}
           </div>

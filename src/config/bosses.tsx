@@ -100,7 +100,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
   },
   "Chaos Von Bon": {
     name: "Chaos Von Bon",
-    icon: "/icons/bosses/magnus.png",
+    icon: "/icons/bosses/von_bon.png",
     hp: [100_000_000_000],
     dr: 100,
     mesos: 81_000_000,
