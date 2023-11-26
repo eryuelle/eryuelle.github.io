@@ -1,0 +1,13 @@
+#table {
+  border-collapse: collapse;
+  border: none;
+}
+
+#table td {
+  border-bottom: 1px solid black;
+  padding: 4px 8px;
+}
+
+#table tr:last-child td {
+  border-bottom: none;
+}

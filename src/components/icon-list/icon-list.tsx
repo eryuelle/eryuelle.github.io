@@ -22,13 +22,13 @@ export default function IconList({ compact, title, items, dictionary }: IconList
 
       return (
         <div className={styles.iconitem}>
-          <div className="image-cage2">
+          <div className="icon-cage-30 icon-border">
             <img
-              className="maple-icon-small"
+              className="icon"
               src={i.icon}
             />
           </div>
-          <div className={`${styles.iconhalf} left-padding`}>
+          <div className={`${styles.iconhalf} lpadding-8`}>
             {i.name}
           </div>
         </div>
@@ -49,12 +49,12 @@ export default function IconList({ compact, title, items, dictionary }: IconList
           <div className={styles.icondesc}>
             <div className={styles.iconhalf}>
               <div>{i.name}</div>
-              <div className={styles.flavortext}>{i.flavor}</div>
+              <div className="flavortext">{i.flavor}</div>
             </div>
             {/* Make this one optional? */}
             <div className={styles.iconhalfright}>
-              <div className={styles.cornerflavortext}>{i.cornerFlavor}</div>
-              <div className={styles.flavortext}>{i.lastFlavor}</div>
+              <div className="bigflavortext">{i.cornerFlavor}</div>
+              <div className="flavortext">{i.lastFlavor}</div>
             </div>
           </div>
         </div>

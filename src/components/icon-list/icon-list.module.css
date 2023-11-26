@@ -35,13 +35,3 @@
   justify-content: center;
   text-align: right;
 }
-
-.cornerflavortext {
-  color: #36454F; /* "Charcoal" */
-  font-size: 16px;
-}
-
-.flavortext {
-  color: gray;
-  font-size: 15px;
-}

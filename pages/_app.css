@@ -8,29 +8,8 @@ body {
   font-size: 16px;
 }
 
-h1, h2, h3 {
-  margin: 0px;
-}
-
-ol, ul {
-  margin: 8px 0px;
-  padding: 0px 32px;
-}
-
-ol ol, ul ol {
-  margin: 0px;
-}
-
-li {
-  padding: 1px 0px;
-}
-
 #body{
   height: 100vh;
-}
-
-.left-padding {
-  padding-left: 8px;
 }
 
 /* Main container */
@@ -52,33 +31,42 @@ li {
   height: 24px;
 }
 
-.maple-icon {
-  height: 40px;
-  width: 40px;
-  border-radius: 5px;
+/* Generic styles */
+
+h1, h2, h3 {
+  margin: 0px;
 }
 
-.image-cage2 {
+ol, ul {
+  margin: 8px 0px;
+  padding: 0px 32px;
+}
+
+ol ol, ul ol {
+  margin: 0px;
+}
+
+li {
+  padding: 1px 0px;
+}
+
+.lpadding-8 {
+  padding-left: 8px;
+}
+
+.flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 30px;
-  width: 30px;
-  border-radius: 3px;
-  border: .5px solid darkgray;
-  background-color: #f0f0f0;
 }
 
-.image-cage2 .maple-icon-small {
-  border-radius: 0px;
-  border: none;
+.gap-4 {
+  gap: 4px;
 }
 
-.maple-icon-small {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+/* "Specific" generic styles */
+
+.bigflavortext {
+  color: #36454F; /* "Charcoal" */
+  font-size: 16px;
 }
 
 .flavortext {
@@ -86,23 +74,45 @@ li {
   font-size: 15px;
 }
 
-/* Gear list */
-
-#gear-table {
-  border-collapse: collapse;
-  border: none;
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-#gear-table .image-cage {
+.icon-border {
+  border: .5px solid darkgray;
+  background-color: #f0f0f0;
+}
+
+.icon-cage-40 {
   display: flex;
-  gap: 4px;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
 }
 
-#gear-table td {
-  border-bottom: 1px solid black;
-  padding: 4px 8px;
+.icon-cage-30 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
 }
 
-#gear-table tr:last-child td {
-  border-bottom: none;
+/* WIP Styles */
+
+
+
+/* To be deprecated */
+
+.maple-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
 }
