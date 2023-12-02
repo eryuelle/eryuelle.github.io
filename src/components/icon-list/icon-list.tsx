@@ -1,34 +1,48 @@
+import { ReactNode } from "react";
+
 import styles from './icon-list.module.css';
 
 interface Icon {
   icon: string;
   name: string;
-  flavor?: string;
+
+  forcePadding?: boolean;
+  flavor?: ReactNode;
   cornerFlavor?: string;
   lastFlavor?: string;
 }
 
 interface IconListProps {
   compact?: boolean;
+  bordered?: boolean;
+
   title: string;
   items: string[];
   dictionary: { [key: string]: Icon };
 }
 
-export default function IconList({ compact, title, items, dictionary }: IconListProps) {
+export default function IconList({ bordered = false, compact, title, items, dictionary }: IconListProps) {
+  const borderClass = () => {
+    return bordered ? "icon-border" : "";
+  }
+
+  const paddedClass = (icon: Icon) => {
+    return icon.forcePadding? "icon-padded" : "icon";
+  }
+
   const compactIter = () => {
     return items.map((item) => {
       const i = dictionary[item];
 
       return (
         <div className={styles.iconitem}>
-          <div className="icon-cage-30 icon-border">
+          <div className={`icon-cage-30 ${borderClass()}`}>
             <img
               className="icon"
               src={i.icon}
             />
           </div>
-          <div className={`${styles.iconhalf} lpadding-8`}>
+          <div className={`${styles.iconhalf}`}>
             {i.name}
           </div>
         </div>
@@ -42,10 +56,13 @@ export default function IconList({ compact, title, items, dictionary }: IconList
 
       return (
         <div className={styles.iconitem}>
-          <img
-            className="maple-icon"
-            src={i.icon}
-          />
+          <div className={`icon-cage-40 ${borderClass()}`}>
+            <img
+              className={paddedClass(i)}
+              src={i.icon}
+            />
+          </div>
+          
           <div className={styles.icondesc}>
             <div className={styles.iconhalf}>
               <div>{i.name}</div>

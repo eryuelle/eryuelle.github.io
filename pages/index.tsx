@@ -11,6 +11,7 @@ export default function Index() {
       <h1>Dailies</h1>
       <h3>Resets @ 5pm MT every day</h3>
       <IconList
+        bordered={true}
         compact={true}
         title="Arcane River"
         items={AR_DAILIES_ORDER}

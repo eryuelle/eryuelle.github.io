@@ -20,11 +20,14 @@ export default function Index() {
         <div className={styles.split}>
           <h3>Sunday Reset @ 5pm MT</h3>
           <IconList
+            bordered={true}
             title="Misc. Tasks"
             items={T_WEEKLIES_ORDER}
             dictionary={T_WEEKLIES()}
           />
           <IconList
+            compact={true}
+            bordered={true}
             title="Arcane River"
             items={AR_WEEKLIES_ORDER}
             dictionary={AR_WEEKLIES()}

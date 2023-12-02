@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 // AR = Arcane River
 
 interface ARWeekly {
@@ -41,9 +43,9 @@ let AR_WEEKLIES_DATA: { [key: string]: ARWeekly } = {
 };
 
 export const AR_WEEKLIES = () => {
-  for (const [k, v] of Object.entries(AR_WEEKLIES_DATA)) {
-      AR_WEEKLIES_DATA[k].flavor = `Level ${v.level}+`;
-  }
+  // for (const [k, v] of Object.entries(AR_WEEKLIES_DATA)) {
+  //     AR_WEEKLIES_DATA[k].flavor = `Level ${v.level}+`;
+  // }
   return AR_WEEKLIES_DATA;
 }
 
@@ -64,7 +66,7 @@ interface BWeekly {
   flavor: string;
 }
 
-// TODO: There's a lot of weekly bosses...
+// Unused for now
 let B_WEEKLIES_DATA: { [key: string]: BWeekly } = {
   "WIP": {
     name: "Work in Progress...",
@@ -88,7 +90,8 @@ interface TWeekly {
   icon: string;
   exp?: string;
   mesos?: string;
-  flavor?: string;
+  flavor?: ReactNode;
+  forcePadding?: boolean;
 }
 
 let T_WEEKLIES_DATA: { [key: string]: TWeekly } = {
@@ -100,7 +103,9 @@ let T_WEEKLIES_DATA: { [key: string]: TWeekly } = {
   "Dark World Tree": {
     name: "Dark World Tree",
     icon: "/icons/tasks/faint_stigma_spirit_stone.png",
-    flavor: "[Absolab Coins] Damien",
+    flavor: <a href="https://strategywiki.org/wiki/MapleStory/Towns/Scrapyard#Weekly_Quests">Scrapyard Guide</a>,
+    // Alt: https://docs.google.com/spreadsheets/d/1FJcMQHfhsDNsRQW_KhrmR3uyWmudv8e8Y_nY5uawKAg
+    forcePadding: true,
   },
 };
 
