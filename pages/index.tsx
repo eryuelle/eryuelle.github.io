@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 
 import IconList from '../src/components/icon-list/icon-list';
 import {
@@ -6,6 +6,10 @@ import {
   B_DAILIES, B_DAILIES_ORDER,
   T_DAILIES, T_DAILIES_ORDER,
 } from '../src/config/dailies';
+import {
+  AR_WEEKLIES, AR_WEEKLIES_ORDER,
+  T_WEEKLIES, T_WEEKLIES_ORDER,
+} from '../src/config/weeklies';
 
 // TODO: Move this to its own component?
 function DayCountdown() {
@@ -15,7 +19,6 @@ function DayCountdown() {
     let now = new Date();
     let midnight = new Date();
     midnight.setUTCHours(24, 0, 0, 0);
-    console.log(midnight.getTime() - now.getTime())
 
     // Convert milliseconds to seconds
     return (midnight.getTime() - now.getTime()) / 1000;
@@ -49,46 +52,104 @@ function DayCountdown() {
   )
 }
 
-function TabRow() {
-  const list = ["Dailies", "Sunday Reset", "Wednesday Reset"]
+interface TabRowProps {
+  tabs: { [key: string]: ReactNode };
+}
+
+// TODO: Also move this to its own component?
+function TabRow({ tabs }: TabRowProps) {
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  const onTabClick = (idx: number) => {
+    setSelectedTab(idx);
+   };
 
   const generateTabs = () => {
-    for (const ele in list) {
-
-    }
+    const keys = Object.keys(tabs);
+    return keys.map((ele, idx) => {
+      return (
+        <div
+          className={`text-center w-150 bordered pointer padding-4 ${selectedTab === idx ? 'bg-lightgray' : ''}`}
+          onClick={() => onTabClick(idx)}
+        >
+          {ele}
+        </div>
+      );
+    });
   }
 
-  return (
-    <div className="flex space-evenly">
+  const displayContent = (): ReactNode => {
+    const keys = Object.keys(tabs);
+    return tabs[keys[selectedTab]];
+  }
+  
 
-    </div>
+  return (
+    <>
+      <div className="flex space-evenly tmargin-8">
+        { generateTabs() }
+      </div>
+      { displayContent() }
+    </>
   )
 }
 
 export default function Index() {
+  const tabs = {
+    "Dailies": (
+      <>
+        <IconList
+          bordered={true}
+          compact={true}
+          title="Arcane River"
+          items={AR_DAILIES_ORDER}
+          dictionary={AR_DAILIES()}
+        />
+        <IconList
+          compact={true}
+          title="Misc. Tasks"
+          items={T_DAILIES_ORDER}
+          dictionary={T_DAILIES()}
+        />
+        <IconList
+          compact={true}
+          title="Bosses"
+          items={B_DAILIES_ORDER}
+          dictionary={B_DAILIES()}
+        />
+      </>
+    ),
+    "Sunday Reset": (
+      <>
+        <IconList
+          bordered={true}
+          title="Misc. Tasks"
+          items={T_WEEKLIES_ORDER}
+          dictionary={T_WEEKLIES()}
+        />
+        <IconList
+          compact={true}
+          bordered={true}
+          title="Arcane River"
+          items={AR_WEEKLIES_ORDER}
+          dictionary={AR_WEEKLIES()}
+        />
+      </>
+    ), 
+    "Wednesday Reset": (
+      <>
+        <div className="tmargin-8">
+          Check out the <a href="/bosses">Bosses</a> tab!
+        </div>
+      </>
+    ),
+  };
+  
   return (
     <>
-      <h1>Dailies</h1>
+      <h1>Chores</h1>
       <DayCountdown />
-      <IconList
-        bordered={true}
-        compact={true}
-        title="Arcane River"
-        items={AR_DAILIES_ORDER}
-        dictionary={AR_DAILIES()}
-      />
-      <IconList
-        compact={true}
-        title="Misc. Tasks"
-        items={T_DAILIES_ORDER}
-        dictionary={T_DAILIES()}
-      />
-      <IconList
-        compact={true}
-        title="Bosses"
-        items={B_DAILIES_ORDER}
-        dictionary={B_DAILIES()}
-      />
+      <TabRow tabs={tabs} />
     </>
   )
 }

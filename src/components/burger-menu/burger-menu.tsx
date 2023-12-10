@@ -15,8 +15,7 @@ export default function BurgerMenu({ checkboxRef }: BurgerMenuProps) {
       </div>
 
       <div className={styles.menu}>
-        <li><a className={styles.menuItem} href="/">Dailies</a></li>
-        <li><a className={styles.menuItem} href="/weeklies">Weeklies</a></li>
+        <li><a className={styles.menuItem} href="/">Chores</a></li>
         <li><a className={styles.menuItem} href="/bosses">Bosses</a></li>
         <li><a className={styles.menuItem} href="/training">Training</a></li>
         <li><a className={styles.menuItem} href="/gear">Gear Progression</a></li>
