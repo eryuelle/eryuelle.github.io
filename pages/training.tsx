@@ -1,8 +1,8 @@
+import TabRow from "../src/components/tab-row/tab-row";
+
 export default function Index() {
-  return (
-    <div>
-      <h1>Training Guide</h1>
-      <div className="flavortext">Below are the levels of the monsters, not when you should go</div>
+  const tabs = {
+    "Maple World": (
       <ul>
         <li>[1 ~ 30] Character Quest</li>
         <li>[1 ~ 30] Savage Terminal Maps</li>
@@ -31,6 +31,10 @@ export default function Index() {
         <li>[194] Fox Tree Lower Path (req. lv 180 + quests)</li>
         <li>[195] Twilight Perion: Forsaken Excavation Site 2</li>
         <li>[199] Scrapyard Quests</li>
+      </ul>
+    ),
+    "Arcane River": (
+      <ul>
         <li>[201 (30*)] Weathered Land of Rage</li>
         <li>[205 (40*)] Fire Zone</li>
         <li>[206 (40*)] T-Boy's Research Train 1</li>
@@ -50,6 +54,14 @@ export default function Index() {
         <li>[254 (730*)] Void Current 3</li>
         <li>[263 (880*)] End of the World 1-4, 1-5, 1-7</li>
       </ul>
+    ), 
+  };
+
+  return (
+    <div>
+      <h1>Training Guide</h1>
+      <div className="flavortext">Below are the levels of the monsters, not when you should go</div>
+      <TabRow tabs={tabs} />
     </div>
   )
 }
