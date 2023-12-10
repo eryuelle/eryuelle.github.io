@@ -54,8 +54,18 @@ li {
   padding-left: 8px;
 }
 
+.w-150 {
+  width: 150px;
+}
+
+/* Flexbox */
+
 .flex {
   display: flex;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-4 {

@@ -7,6 +7,7 @@ import {
   T_DAILIES, T_DAILIES_ORDER,
 } from '../src/config/dailies';
 
+// TODO: Move this to its own component?
 function DayCountdown() {
   const [timeRemaining, setTimeRemaining] = useState<number>(0);
 
@@ -44,6 +45,22 @@ function DayCountdown() {
   return (
     <div>
       Day resets in {formatDate()} (5pm MT)
+    </div>
+  )
+}
+
+function TabRow() {
+  const list = ["Dailies", "Sunday Reset", "Wednesday Reset"]
+
+  const generateTabs = () => {
+    for (const ele in list) {
+
+    }
+  }
+
+  return (
+    <div className="flex space-evenly">
+
     </div>
   )
 }

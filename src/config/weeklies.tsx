@@ -98,13 +98,14 @@ let T_WEEKLIES_DATA: { [key: string]: TWeekly } = {
   "Scrapyard": {
     name: "Scrapyard",
     icon: "/icons/tasks/diffusion_line_energy_core_grade_a.png",
-    flavor: "[Absolab Coins] Lotus",
+    flavor: <a href="https://strategywiki.org/wiki/MapleStory/Towns/Scrapyard#Weekly_Quests">Scrapyard Guide</a>,
+    // Alt: https://docs.google.com/spreadsheets/d/1FJcMQHfhsDNsRQW_KhrmR3uyWmudv8e8Y_nY5uawKAg
+
   },
   "Dark World Tree": {
     name: "Dark World Tree",
     icon: "/icons/tasks/faint_stigma_spirit_stone.png",
-    flavor: <a href="https://strategywiki.org/wiki/MapleStory/Towns/Scrapyard#Weekly_Quests">Scrapyard Guide</a>,
-    // Alt: https://docs.google.com/spreadsheets/d/1FJcMQHfhsDNsRQW_KhrmR3uyWmudv8e8Y_nY5uawKAg
+    flavor: "oops",
     forcePadding: true,
   },
 };
