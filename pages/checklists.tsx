@@ -1,7 +1,7 @@
 export default function Index() {
   // Accessories - Rings (4), Pendants (2), Face, Eye, Earrings
   return (
-    <>
+    <div>
       <h1>Checklists</h1>
       <h2>Mobbing</h2>
       <ol>
@@ -43,6 +43,6 @@ export default function Index() {
           <li>[20%] WAP</li>
         </ol>
       </ol>
-    </>
+    </div>
   )
 }

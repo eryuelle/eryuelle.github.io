@@ -5,13 +5,13 @@ import {
 
 export default function Index() {
   return (
-    <>
+    <div>
       <h1>Bosses</h1>
       <IconList
         title="Weekly Bosses"
         items={BOSSES_ORDER}
         dictionary={BOSSES()}
       />
-    </>
+    </div>
   )
 }
