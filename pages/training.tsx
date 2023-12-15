@@ -2,122 +2,233 @@ import TabRow from "../src/components/tab-row/tab-row";
 
 interface Map {
   name: string;
-  range: string;
-  force?: string;
+  level: number;
+  force?: number;
 }
 
 interface TrainingTableProps {
   maps: Map[];
 }
 
-const maps = [
+const MAPLE_WORLD = [
   {
     name: "Character Quest",
-    range: "1~30",
+    level: 1,
   },
   {
     name: "Savage Terminal Maps",
-    range: "1~30",
+    level: 10,
   },
   {
     name: "Theme Dungeons",
-    range: "30~60",
+    level: 30,
   },
   {
     name: "Silent Swamp",
-    range: "66",
+    level: 66,
   },
   {
     name: "Cave Cliff",
-    range: "68",
+    level: 68,
   },
   {
     name: "Stairway to the Sky I",
-    range: "71",
+    level: 71,
   },
   {
     name: "Ice Valley II",
-    range: "81",
+    level: 81,
   },
   {
     name: "Tent of the Entertainers",
-    range: "86",
+    level: 86,
   },
   {
     name: "Sahel 2",
-    range: "90",
+    level: 90,
   },
   {
     name: "Lab - Area C-2: Authorized Personnel Only",
-    range: "95",
+    level: 95,
   },
   {
     name: "Minar Forest: West Border",
-    range: "104",
+    level: 104,
   },
   {
     name: "Toy Factory <Process 1> Zone 5",
-    range: "113",
+    level: 113,
   },
   {
     name: " Fantasy Theme World: Extreme Station <3>",
-    range: "123",
+    level: 123,
   },
   {
-    name: "Korean Folk Town",
-    range: "130~140",
+    name: "Korean Folk Town: Moonlight Ridge",
+    level: 137,
   },
   {
     name: "Partem: Keeper's Path 4 (req. lv 135)",
-    range: "142",
+    level: 142,
   },
   {
     name: "Kerning Tower: 2F Cafe <2, 3> (has SF)",
-    range: "149",
+    level: 149,
   },
   {
     name: "Kerning Tower: 5F Cosmetic Shops <3> (has SF)",
-    range: "155",
+    level: 155,
   },
   {
     name: "Showa Street 2",
-    range: "164",
+    level: 164,
   },
   {
     name: "Boswell Field IV",
-    range: "167",
+    level: 167,
   },
   {
-    name: "Kritias: Forest of [Pain 2, Scorching 2, Sorrow 4]",
-    range: "170~186",
+    name: "Kritias: Forest of Pain 2",
+    level: 171,
   },
   {
     name: "Corridor 203 (has SF)",
-    range: "175",
+    level: 175,
+  },
+  {
+    name: "Kritias: Forest of Scorching 2",
+    level: 180,
   },
   {
     name: "Dingy Brawl 'n' Bash Club 3 (req. level 175)",
-    range: "182",
+    level: 182,
+  },
+  {
+    name: "Kritias: Forest of Sorrow 4",
+    level: 185,
   },
   {
     name: "Twilight Perion: Deserted Southern Ridge (has SF)",
-    range: "190",
+    level: 190,
   },
   {
-    name: " Fox Tree Top Path (req. lv 180 + quests)",
-    range: "191",
+    name: "Fox Tree Top Path (req. lv 180 + quests)",
+    level: 191,
   },
   {
     name: "Fox Tree Lower Path (req. lv 180 + quests)",
-    range: "194",
+    level: 194,
   },
   {
     name: "Twilight Perion: Forsaken Excavation Site 2",
-    range: "195",
+    level: 195,
   },
   {
     name: "[Haven] Scrapyard Quests",
-    range: "199",
+    level: 199,
+  },
+];
+
+const ARCANE_RIVER = [
+  {
+    name: "Weathered Land of Rage",
+    level: 201,
+    force: 30,
+  },
+  {
+    name: "Fire Zone",
+    level: 205,
+    force: 40,
+  },
+  {
+    name: "T-Boy's Research Train 1",
+    level: 206,
+    force: 40,
+  },
+  {
+    name: "Hidden Research Train",
+    level: 210,
+    force: 100,
+  },
+  {
+    name: "Slurpy Forest: Slurpy Forest Depths",
+    level: 213,
+    force: 100,
+  },
+  {
+    name: "Revelation Place 3",
+    level: 224,
+    force: 210,
+  },
+  {
+    name: "Occupied Dance Floor 2",
+    level: 224,
+    force: 210,
+  },
+  {
+    name: "The Forest of Earth",
+    level: 232,
+    force: 280,
+  },
+  {
+    name: "Between Frost and Thunder 2",
+    level: 234,
+    force: 320,
+  },
+  {
+    name: "Cavern Lower Path",
+    level: 237,
+    force: 360,
+  },
+  {
+    name: "Labyrinthine Cavern - Upper Path",
+    level: 240,
+    force: 360,
+  },
+  {
+    name: "Labyrinthine Cavern - Upper Path",
+    level: 240,
+    force: 360,
+  },
+  {
+    name: "Shadowdance Hall 4",
+    level: 240,
+    force: 480,
+  },
+  {
+    name: "Mirror-touched Sea 2, 4",
+    level: 245,
+    force: 600,
+  },
+  {
+    name: "Mirror-touched Sea 7",
+    level: 247,
+    force: 600,
+  },
+  {
+    name: "Star-Swallowing Sea 1, 4",
+    level: 247,
+    force: 670,
+  },
+  {
+    name: "Last Horizon 2",
+    level: 251,
+    force: 670,
+  },
+  {
+    name: "Void Current 3",
+    level: 254,
+    force: 730,
+  },
+  {
+    name: "Labyrinth of Suffering Deep Core 1",
+    level: 259,
+    force: 820,
+  },
+  {
+    name: "End of the World 1-4, 1-5, 1-7",
+    level: 263,
+    force: 880,
   },
 ];
 
@@ -126,7 +237,8 @@ function TrainingTable({ maps }: TrainingTableProps) {
     return maps.map((map) => {
       return (
         <tr>
-          <td className="padding-2 text-center">{map.range}</td>
+          <td className="padding-2 text-center">{map.level}</td>
+          { map.force !== undefined ? <td className="padding-2 text-center">{map.force}</td> : <></> }
           <td className="padding-2">{map.name}</td>
         </tr>
       );
@@ -136,7 +248,11 @@ function TrainingTable({ maps }: TrainingTableProps) {
   return (
     <table className="tmargin-8">
       <thead className="bordered-bottom bold">
-        <td className="w-100 padding-2 text-center">Level</td>
+        { maps[0].force !== undefined ?
+          <td className="w-60 padding-2 text-center">Level</td> :
+          <td className="w-100 padding-2 text-center">Level</td>
+        }
+        { maps[0].force !== undefined ? <td className="w-100 padding-2 text-center">Force</td> : <></> }
         <td className="padding-2">Location</td>
       </thead>
       { iter() }
@@ -146,29 +262,8 @@ function TrainingTable({ maps }: TrainingTableProps) {
 
 export default function Index() {
   const tabs = {
-    "Maple World": <TrainingTable maps={maps} />,
-    "Arcane River": (
-      <ul>
-        <li>[201 (30*)] Weathered Land of Rage</li>
-        <li>[205 (40*)] Fire Zone</li>
-        <li>[206 (40*)] T-Boy's Research Train 1</li>
-        <li>[210 (100*)] Hidden Research Train</li>
-        <li>[213 (100*)] Slurpy Forest: Slurpy Forest Depths</li>
-        <li>[220 (190*)] Yum Yum Island Hidden Illiard Field</li>
-        <li>[222 (210*)] Chicken Festival 2</li>
-        <li>[224 (210*)] Revelation Place 3</li>
-        <li>[225 (210*)] Occupied Dance Floor 2</li>
-        <li>[234 (320*)] Between Frost and Thunder 2</li>
-        <li>[237 (360*)] Cavern Lower Path</li>
-        <li>[240 (360*)] Labyrinthine Cavern - Upper Path</li>
-        <li>[245 (600*)] Mirror-touched Sea 2, 4</li>
-        <li>[247 (600*)] Mirror-touched Sea 7</li>
-        <li>[251 (670*)] Star-Swallowing Sea 1, 4</li>
-        <li>[251 (670*)] Last Horizon 2</li>
-        <li>[254 (730*)] Void Current 3</li>
-        <li>[263 (880*)] End of the World 1-4, 1-5, 1-7</li>
-      </ul>
-    ),
+    "Maple World": <TrainingTable maps={MAPLE_WORLD} />,
+    "Arcane River": <TrainingTable maps={ARCANE_RIVER} />,
   };
 
   return (
