@@ -6,6 +6,11 @@ interface Boss {
   hp: number[];
   dr: number;
   mesos: number;
+  kills?: number;
+
+  // For icon-list-counter
+  numVal?: number;
+  defaultVal?: number;
 
   // Computed flavor texts
   flavor?: string;
@@ -144,6 +149,8 @@ let BOSSES_DATA: { [key: string]: Boss } = {
 
 export const BOSSES = () => {
   for (const [k, v] of Object.entries(BOSSES_DATA)) {
+    BOSSES_DATA[k].numVal = v.mesos;
+    BOSSES_DATA[k].defaultVal = v.kills;
     BOSSES_DATA[k].flavor = `${abbreviateNumber(v.mesos)} Mesos`;
     BOSSES_DATA[k].cornerFlavor = `${abbreviateNumber(sum(v.hp))} HP`;
     BOSSES_DATA[k].lastFlavor = `${v.dr}% DR`;
