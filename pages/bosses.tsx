@@ -2,7 +2,7 @@ import IconList from '../src/components/icon-list/icon-list';
 import IconListCounter from '../src/components/icon-list-counter/icon-list-counter';
 import TabRow from '../src/components/tab-row/tab-row';
 import {
-  BOSSES, BOSSES_ORDER
+  BOSSES, BOSSES_ORDER, MESOS_ORDER
 } from '../src/config/bosses';
 
 export default function Index() {
@@ -14,9 +14,9 @@ export default function Index() {
         dictionary={BOSSES()}
       />
     ),
-    "Testing": (
+    "Mesos": (
       <IconListCounter
-        items={BOSSES_ORDER}
+        items={MESOS_ORDER}
         dictionary={BOSSES()}
       />
     ),

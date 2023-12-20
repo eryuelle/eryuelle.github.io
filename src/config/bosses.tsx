@@ -32,6 +32,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [6_000_000_000_000, 6_000_000_000_000],
     dr: 300,
     mesos: 175_562_500,
+    kills: 0.5,
   },
   "Normal Guardian Angel Slime": {
     name: "Normal Guardian Angel Slime",
@@ -39,6 +40,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [5_000_000_000_000],
     dr: 300,
     mesos: 171_610_000,
+    kills: 0.5,
   },
   "Normal Damien": {
     name: "Normal Damien",
@@ -46,6 +48,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [840_000_000_000, 360_000_000_000],
     dr: 300,
     mesos: 169_000_000,
+    kills: 1,
   },
   "Normal Lotus": {
     name: "Normal Lotus",
@@ -53,6 +56,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [400_000_000_000, 400_000_000_000, 710_000_000_000],
     dr: 300,
     mesos: 162_562_500,
+    kills: 1,
   },
   "Akechi Mitsuhide": {
     name: "Akechi Mitsuhide",
@@ -60,6 +64,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [152_000_000_000, 152_000_000_000],
     dr: 300,
     mesos: 144_000_000,
+    kills: 1,
   },
   "Chaos Papulatus": {
     name: "Chaos Papulatus",
@@ -67,6 +72,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [378_000_000_000, 126_000_000_000],
     dr: 250,
     mesos: 132_250_000,
+    kills: 1,
   },
   "Chaos Vellum": {
     name: "Chaos Vellum",
@@ -74,6 +80,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [200_000_000_000],
     dr: 200,
     mesos: 105_062_500,
+    kills: 2,
   },
   "Hard Magnus": {
     name: "Hard Magnus",
@@ -81,6 +88,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [120_000_000_000],
     dr: 120,
     mesos: 95_062_500,
+    kills: 2,
   },
   "Normal Princess No": {
     name: "Normal Princess No",
@@ -88,6 +96,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [200_000_000_000],
     dr: 100,
     mesos: 81_000_000,
+    kills: 2,
   },
   "Chaos Zakum": {
     name: "Chaos Zakum",
@@ -95,6 +104,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [84_000_000_000, 84_000_000_000],
     dr: 100,
     mesos: 81_000_000,
+    kills: 2,
   },
   "Chaos Crimson Queen": {
     name: "Chaos Crimson Queen",
@@ -102,6 +112,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [140_000_000_000],
     dr: 120,
     mesos: 81_000_000,
+    kills: 2,
   },
   "Chaos Von Bon": {
     name: "Chaos Von Bon",
@@ -109,6 +120,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [100_000_000_000],
     dr: 100,
     mesos: 81_000_000,
+    kills: 2,
   },
   "Chaos Pierre": {
     name: "Chaos Pierre",
@@ -116,6 +128,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [80_000_000_000],
     dr: 80,
     mesos: 81_000_000,
+    kills: 2,
   },
   "Normal Cygnus": {
     name: "Normal Cygnus",
@@ -123,13 +136,16 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [63_000_000_000],
     dr: 100,
     mesos: 72_250_000,
+    kills: 2,
   },
+  /* TODO: Fix Chaos Pink Bean HP to include statues */
   "Chaos Pink Bean": {
     name: "Chaos Pink Bean",
     icon: "/icons/bosses/pink_bean.png",
     hp: [69_300_000_000],
     dr: 100,
     mesos: 64_000_000,
+    kills: 2,
   },
   "Hard Hilla": {
     name: "Hard Hilla",
@@ -137,6 +153,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [16_800_000_000],
     dr: 100,
     mesos: 56_250_000,
+    kills: 2,
   },
   "Hard Von Leon": {
     name: "Hard Von Leon",
@@ -157,6 +174,26 @@ export const BOSSES = () => {
   }
   return BOSSES_DATA;
 }
+
+export const MESOS_ORDER = [
+  "Easy Will",
+  "Easy Lucid",
+  "Normal Guardian Angel Slime",
+  "Normal Damien",
+  "Normal Lotus",
+  "Akechi Mitsuhide",
+  "Chaos Papulatus",
+  "Chaos Vellum",
+  "Hard Magnus",
+  "Normal Princess No",
+  "Chaos Zakum",
+  "Chaos Crimson Queen",
+  "Chaos Von Bon",
+  "Chaos Pierre",
+  "Normal Cygnus",
+  "Chaos Pink Bean",
+  "Hard Hilla",
+];
 
 export const BOSSES_ORDER = [
   "Easy Will",
