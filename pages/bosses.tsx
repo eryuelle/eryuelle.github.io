@@ -24,6 +24,7 @@ export default function Index() {
 
   return (
     <div>
+      {/* TODO: For all titles and subtitles, center them on page? */}
       <h1>Bosses</h1>
       <TabRow tabs={tabs} />
     </div>
