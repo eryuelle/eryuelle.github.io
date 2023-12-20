@@ -3,18 +3,8 @@
 import React, { ReactNode, useEffect, useState } from "react";
 
 import styles from './icon-list-counter.module.css';
+import Counter from "./counter";
 import { abbreviateNumber } from "../../lib/numbers";
-
-interface CounterProps {
-  value: number;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-function Counter({value, onChange}: CounterProps) {
- return (
-   <input type="number" value={value} step="0.5" min="0" onChange={onChange} />
- );
-}
 
 interface Icon {
   icon: string;
@@ -45,6 +35,7 @@ export default function IconListCounter({ bordered = false, title = "", items, d
 
   const handleChange = (index: number, event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = parseFloat(event.target.value);
+    console.log(newValue);
     setCounts(counts.map((c, i) => i === index ? newValue : c));
   };
 
@@ -103,7 +94,7 @@ export default function IconListCounter({ bordered = false, title = "", items, d
   return (
     <div className={styles.container}>
       { title !== "" ? <h2>{title}</h2> : <></> }
-      <div>Total: {abbreviateNumber(sum)} Mesos/wk</div>
+      <div>Total: {abbreviateNumber(sum)} Mesos/week</div>
       { iter() }
     </div>
   );

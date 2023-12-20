@@ -2,8 +2,7 @@ html {
   background-color: #fafafa;
 }
 
-body {
-  /* background: antiquewhite; */
+body, input, button {
   font-family: -apple-system, BlinkMacSystemFont, Inter, "Segoe UI";
   font-size: 16px;
 }
@@ -120,6 +119,10 @@ table {
 
 .flex {
   display: flex;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .space-evenly {
