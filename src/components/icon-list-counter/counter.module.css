@@ -1,10 +1,17 @@
 .input {
-  /* Remove native buttons */
+  /* Remove native buttons - Firefox */
   appearance: textfield;
   border: 0;
 
   width: 35px;
   text-align: center;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  /* Remove native buttons - Chrome, Safari, Edge */
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .button {
