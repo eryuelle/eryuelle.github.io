@@ -23,15 +23,19 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Maypulsutori</title>
       </Head>
       <div id="body">
-        <BurgerMenu checkboxRef={checkboxRef} />
+        <div id="secondBody">
+          <BurgerMenu checkboxRef={checkboxRef} />
 
-        <div id="page" onClick={pageClick}>
-          <div id="container">
-            <Component {...pageProps} />
-            
-            <div id="stupidspace"></div>
-            <div className="flavortext">
-              Updated as of 11/18/2023 (New Age patch)
+          <div id="page" onClick={pageClick}>
+            <div id="container">
+              <Component {...pageProps} />
+              
+              {/*
+              <div id="stupidspace"></div>
+              <div className="flavortext">
+                Updated as of 11/18/2023 (New Age patch)
+              </div>
+              */}
             </div>
           </div>
         </div>

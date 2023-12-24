@@ -2,8 +2,10 @@ import { abbreviateNumber, sum } from "../lib/numbers";
 
 interface Boss {
   name: string;
+  abbreviated?: string;
   icon: string;
   hp: number[];
+  fullHP?: number;
   dr: number;
   mesos: number;
   kills?: number;
@@ -36,6 +38,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
   },
   "Normal Guardian Angel Slime": {
     name: "Normal Guardian Angel Slime",
+    abbreviated: "Normal GA Slime",
     icon: "/icons/bosses/guardian_angel_slime.png",
     hp: [5_000_000_000_000],
     dr: 300,
@@ -96,7 +99,7 @@ let BOSSES_DATA: { [key: string]: Boss } = {
     hp: [200_000_000_000],
     dr: 100,
     mesos: 81_000_000,
-    kills: 2,
+    kills: 1,
   },
   "Chaos Zakum": {
     name: "Chaos Zakum",
@@ -168,8 +171,10 @@ export const BOSSES = () => {
   for (const [k, v] of Object.entries(BOSSES_DATA)) {
     BOSSES_DATA[k].numVal = v.mesos;
     BOSSES_DATA[k].defaultVal = v.kills;
+    BOSSES_DATA[k].fullHP = sum(v.hp);
+
     BOSSES_DATA[k].flavor = `${abbreviateNumber(v.mesos)} Mesos`;
-    BOSSES_DATA[k].cornerFlavor = `${abbreviateNumber(sum(v.hp))} HP`;
+    BOSSES_DATA[k].cornerFlavor = `${BOSSES_DATA[k].fullHP} HP`;
     BOSSES_DATA[k].lastFlavor = `${v.dr}% DR`;
   }
   return BOSSES_DATA;

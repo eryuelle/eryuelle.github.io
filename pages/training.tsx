@@ -186,11 +186,6 @@ const ARCANE_RIVER = [
     force: 360,
   },
   {
-    name: "Labyrinthine Cavern - Upper Path",
-    level: 240,
-    force: 360,
-  },
-  {
     name: "Shadowdance Hall 4",
     level: 240,
     force: 480,

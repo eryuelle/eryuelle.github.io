@@ -1,5 +1,12 @@
+:root {
+}
+
 html {
   background-color: #fafafa;
+}
+
+body {
+  margin: 0;
 }
 
 body, input, button {
@@ -8,7 +15,11 @@ body, input, button {
 }
 
 #body{
-  height: 98.5vh;
+  height: 100vh;
+}
+
+#secondBody {
+  padding: 8px;
 }
 
 /* Main container */
@@ -184,10 +195,58 @@ table {
   border-radius: 5px;
 }
 
+.icon-cage-20 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+}
+
 /* WIP Styles */
 
+.dropdown-button {
+  background-color: #fafafa;
+  cursor: pointer;
+  border: 0;
+}
 
+.dropdown-content {
+  position: absolute;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
 
-/* To be deprecated */
+  height: 300px;
+  width: 200px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
 
+.padding-1-2 {
+  padding: 1px 2px;
+}
+ 
+.dropdown-content > div:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
 
+.dropdown-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.875em;
+}
+
+.selected {
+  background-color: lightgreen;
+}
+
+.caret-down {
+  height: 12px;
+}
