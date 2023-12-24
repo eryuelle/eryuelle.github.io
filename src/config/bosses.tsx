@@ -174,7 +174,7 @@ export const BOSSES = () => {
     BOSSES_DATA[k].fullHP = sum(v.hp);
 
     BOSSES_DATA[k].flavor = `${abbreviateNumber(v.mesos)} Mesos`;
-    BOSSES_DATA[k].cornerFlavor = `${BOSSES_DATA[k].fullHP} HP`;
+    BOSSES_DATA[k].cornerFlavor = `${abbreviateNumber(BOSSES_DATA[k].fullHP)} HP`;
     BOSSES_DATA[k].lastFlavor = `${v.dr}% DR`;
   }
   return BOSSES_DATA;

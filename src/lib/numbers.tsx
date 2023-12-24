@@ -1,4 +1,6 @@
-export const abbreviateNumber = (number: number): string => {
+export const abbreviateNumber = (number: number | undefined): string => {
+  if (number == undefined) { return "NaN"; }
+
   const abbreviations = ['', 'K', 'M', 'B', 'T', 'Q'];
 
   let index = 0;
